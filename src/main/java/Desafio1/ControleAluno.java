@@ -31,6 +31,8 @@ import java.util.Scanner;
 
 public class ControleAluno {
 
+    private static double mediaCalculo;
+
     public static void cadastrarAluno(List<Aluno> listAlunos, String ra, String nome){
 
         Aluno alunoUm = new Aluno();
@@ -40,24 +42,29 @@ public class ControleAluno {
 
     }
 
-    public void cadastrarNotaAluno(List<Aluno> listAlunos, String ra, List<BigDecimal> notas){
+    public static void cadastrarNotaAluno(List<Aluno> listAlunos, String ra, List<BigDecimal> notas){
 
         for(int i = 0; i < listAlunos.size(); i++){
 
             if(listAlunos.get(i).equals(ra)){
 
                 listAlunos.get(i).setNotas(notas);
-
             }
-
-
         }
-
     }
 
-    public void mostrarMediaAluno(List<Aluno> alunos, String ra){
+    public static double mostrarMediaAluno(List<Aluno> listAlunos, String ra, List<BigDecimal> notas){
 
-    }
+        for(int i = 0; i < listAlunos.size(); i++){
+
+            if(listAlunos.get(i).equals(ra)){
+
+                CalculoMedia calculoMedia = new CalculoMedia();
+
+                mediaCalculo = calculoMedia.calcularMedia(notas);
+                }
+            }
+    return mediaCalculo; }
 
     public void removerAluno(List<Aluno> alunos, String ra){
 
