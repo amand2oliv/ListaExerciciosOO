@@ -17,4 +17,5 @@ public class Aluno {
     private String ra;
     private String nomeCompleto;
     private List<BigDecimal> notas;
+
 }

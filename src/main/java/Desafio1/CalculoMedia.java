@@ -6,8 +6,8 @@ import java.util.List;
 
 public class CalculoMedia {
 
-    Double soma;
-    Double media;
+    Double soma = 0.0;
+    Double media = 0.0;
 
     List<Double> listDouble = new ArrayList<>();
 
