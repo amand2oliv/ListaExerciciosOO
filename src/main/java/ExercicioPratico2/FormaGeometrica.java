@@ -4,6 +4,4 @@ public interface FormaGeometrica {
      double getArea();
      double getComprimetro();
 
-
-
 }
